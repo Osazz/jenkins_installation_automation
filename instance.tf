@@ -4,22 +4,22 @@ resource "aws_security_group" "Jenkin_SG" {
   description = "Allow ssh and http access to jenkins server "
 
   dynamic "ingress" {
-      for_each = var.sg_ports
-      iterator = port
-      content {
-        from_port   = port.value
-        to_port     = port.value
-        protocol    = "tcp"
-        cidr_blocks = var.cidr_block
-      }
+    for_each = var.sg_ports
+    iterator = port
+    content {
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "tcp"
+      cidr_blocks = var.cidr_block
     }
+  }
 
-    tags = merge(
-      var.additional_tags,
-      {
-        Name = "Jenkins Server"
-      },
-    )
+  tags = merge(
+    var.additional_tags,
+    {
+      Name = "Jenkins Server"
+    },
+  )
 }
 
 
