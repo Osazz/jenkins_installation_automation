@@ -8,7 +8,7 @@ Steps
     - ssh access on port 22
     - http access on port 8080
   - key name attached
-- remote command execution:
+- User data file will contain:
   // Install Java on the system
   - sudo yum -y install java-1.8.0-openjdk wget
   - java -version
