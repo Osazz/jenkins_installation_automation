@@ -38,3 +38,5 @@ jobs:
         export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
         export AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }}
         terraform plan
+
+
